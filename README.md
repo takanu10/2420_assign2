@@ -9,11 +9,23 @@ This readme will cover:
 
 Create a custom VPC and this will ensure optimal security/safety for your 2 droplets.
 
+![image](https://user-images.githubusercontent.com/98194516/205420499-0ecbd66a-1425-45ad-aae5-a32b5665f41a.png)
+
+
 Create the 2 droplets and connect them to the VPC by using the drop-down bar in the droplet setup menu.
+
+![image](https://user-images.githubusercontent.com/98194516/205420492-e61f85d3-5102-4e4a-9369-e8eba4bd7696.png)
+
 
 Create the load balancer and this will ensure optimal web traffic management when your servers go live.
 
+![image](https://user-images.githubusercontent.com/98194516/205420481-d42c70ae-9d4d-4875-92a8-b1afba7e2611.png)
+
+
 Create the firewall.
+
+![image](https://user-images.githubusercontent.com/98194516/205420484-dcef8ee4-05a8-4340-adf3-98c3fdd6aa5c.png)
+
 
 ### 2. Create Regular User on Both Droplets
 
