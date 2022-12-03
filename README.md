@@ -179,5 +179,27 @@ WantedBy=multi-user.target
 
 ### 8. Upload and run web app
 
+Using sftp, upload `caddyfile` and `hello_web.service` to servers.
+
+```
+sftp -i ~/.ssh/{key_file_name} {user}@{droplet_ip}
+put -r caddyfile
+put -r hello_web.service
+```
+
+Now ssh into each server and ensure files are in the proper locations.
+- service file goes in `/etc/systemd/system`; `sudo mv hello_web.service /etc/systemd/system`
+- caddyfile server block needs a couple more steps:
+
+```
+sudo mkdir /etc/caddy
+sudo mv caddyfile /etc/caddy
+```
+Now that everything's in the right place, start and enable the `hello_web.service`.
+
+```
+sudo systemctl start hello_web.service
+sudo systemctl enable hello_web.service
+```
 
 
