@@ -1,0 +1,16 @@
+[Unit]
+Description=hello world web app that restarts service on failure + requires configured network 
+After=network.target
+Wants=network-online.target
+
+[Service]
+Restart=on-failure
+ExecStart=/home/darren/.volta/bin/node /var/www/src/index.js
+User=darren
+Group=darren 
+SyslogIdentifier=hello_app
+
+[Install]
+WantedBy=multi-user.target
+
+
